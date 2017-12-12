@@ -17,10 +17,6 @@ describe "post a quote route", :type => :request do
   it 'returns a created status' do
     expect(response).to have_http_status(:created)
   end
-  #
-  # before do
-  #   post '/quotes', params: { :author => '', :content => 'test_content'}
-  # end
 
   it 'returns the author name' do
     post '/quotes', params: { :author => '', :content => 'test_content'}
